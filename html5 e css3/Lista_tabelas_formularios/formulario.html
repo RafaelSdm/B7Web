@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+    <h1>Pagina de teste</h1>
+
+    <form action="formulario.html" method="POST">
+
+        <label for="">
+            Nome Completo:
+            <br>
+            <input type="text" name="nome" id="nome" required minlength="3" >
+        </label>
+
+        
+
+
+        <label for="">
+            Categoria:
+            <select name="categoria" id="">
+                <option value="1">Categoria 1</option>
+                <option value="2">Categoria 2</option>
+                <option value="3">Categoria 3</option>
+                <option value="4">Categoria 4</option>
+                <option value="5">Categoria 5</option>
+            </select>
+        </label>
+
+        <label for="">
+            Idade:
+            <input type="number" name="idade" id="idade" min="1">
+        </label>
+
+        <label for="">
+            Descrição:
+            <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </label>
+
+        <label for="">
+            Email:
+            <input type="email" name="email" id="" pattern="" >
+        </label>
+
+        <label for="">
+            <input type="checkbox" name="" id="">
+            Eu declaro que li e aceito os <a class="termos_link" href="formulario.html" target="_blank">termos de uso</a>
+        </label>
+
+
+        <label for="">
+            Foto:
+            <input type="file" name="arq" id="" accept="application/pdf">
+        </label>
+
+        <button>Fazer cadastro</button>
+
+    </form>
+    
+</body>
+</html>
