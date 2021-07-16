@@ -7,7 +7,7 @@
 
 
 body{
-    background-color: var(--fundo);
+    background-color: var(--fundo, pink);
 }
 
 h1{
