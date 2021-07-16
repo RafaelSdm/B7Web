@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(112, 54, 54);
+}
+
+@media (min-width: 1000px){
+    body{
+        background-color: pink;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px){
+    body{
+        background-color: gold;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 700px){
+    body{
+        background-color: steelblue;
+    }
+}
+
+@media only print{
+    h1{
+        font-size: 50px;
+    }
+}
+
+
+
