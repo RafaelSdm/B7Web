@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    color: blueviolet;
+}
+
+body .container{
+    color: gold;
+}
+
+div{
+    color: blueviolet;
+}
