@@ -1,0 +1,7 @@
+.img1{
+    width: max(50%, 300px);
+}
+
+.img2{
+    width: min(50%, 300px);
+}
