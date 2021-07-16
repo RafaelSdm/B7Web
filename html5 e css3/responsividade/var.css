@@ -1,0 +1,19 @@
+:root{
+    --cortitulo: #000;
+    --fundo: red;
+    --texto: gold;
+}
+
+
+
+body{
+    background-color: var(--fundo);
+}
+
+h1{
+    color: var(--cortitulo);
+}
+
+p{
+    color: var(--texto);
+}
