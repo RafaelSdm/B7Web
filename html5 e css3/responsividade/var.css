@@ -2,12 +2,14 @@
     --cortitulo: #000;
     --fundo: red;
     --texto: gold;
+    --fonte: 25px;
 }
 
 
 
 body{
     background-color: var(--fundo, pink);
+    font-size: var(--fonte);
 }
 
 h1{
@@ -16,4 +18,11 @@ h1{
 
 p{
     color: var(--texto);
+}
+
+@media (max-width: 450px){
+    :root{
+        --fonte:15px
+    }
+
 }
