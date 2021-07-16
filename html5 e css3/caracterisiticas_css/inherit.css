@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+}
+
+.box{
+    font-size: 15px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.box h1{
+    font-size: inherit;
+}
+
