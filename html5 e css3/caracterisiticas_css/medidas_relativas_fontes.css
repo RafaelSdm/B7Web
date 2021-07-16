@@ -1,0 +1,35 @@
+html{
+    font-size: 10px;
+}
+
+
+
+body{
+    font-size: 20px;
+}
+
+
+.container{
+    font-size: 2rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.box-interno{
+    width: 10em;
+    height: 10em;
+    background-color: aquamarine;
+}
+
+.box{
+    width: 50%;
+    background-color: #999;
+
+}
+
+.box-interno2{
+    width: 50%;
+    background-color: rgb(68, 66, 66);
+}
