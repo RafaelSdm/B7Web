@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    margin: 10px;
+}
+
+.container2{
+
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: red;
+
+}
+
+.container div,
+.container2 div{
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.container3{
+    display: flex;
+    flex-direction: row;
+    background-color: gold;
+    margin: 10px;
+}
+
+.div1{
+    flex: 1;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.div2{
+    flex: 1;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+.div3{
+    flex: 2;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+
+}
