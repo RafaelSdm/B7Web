@@ -204,3 +204,63 @@ nav a:hover{
     background-color: #39aae1;
     margin-top: 10px;
 }
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article{
+    flex: 1;
+    min-width: 300px;
+    margin-right: 25px;
+}
+
+article a{
+    text-decoration: none;
+}
+
+article .news_data {
+    display: flex;
+}
+
+article .news_posted_at{
+    background-color: #2b4c99;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 2px;
+}
+
+article .news_comments{
+    background-color: #0079c7;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+
+article .news_thamb{
+    margin-top: 30px ;
+}
+
+article .news_thamb img{
+    width: 100%;
+    height: auto;
+}
+
+
+article .news_title{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 23px;
+}
+
+article .news_text{
+    color: rgb(72, 72, 72);
+    font-size: 14px;
+    line-height: 20px;
+
+    
+}
+
