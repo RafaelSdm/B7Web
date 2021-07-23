@@ -1,0 +1,11 @@
+input , a{
+    display: block;
+}
+
+input[required]{
+    background-color: red;
+}
+
+input[name="usuario"]{
+    padding: 20px;
+}
