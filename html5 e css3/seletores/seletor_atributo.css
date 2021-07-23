@@ -19,3 +19,7 @@ a[href *="google"]{
 a[href $= "html"]{
     background-color: yellow;
 }
+
+div:empty{
+    background-color: red;
+}
