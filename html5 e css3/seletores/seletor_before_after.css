@@ -1,3 +1,19 @@
-div::after{
-    
+body{
+    text-align: center;
+}
+
+span::before{
+    content: "";
+    display: inline-block;
+    color: red;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+
+
+}
+
+span::after{
+    content: "<-";
+    color: red;
 }
