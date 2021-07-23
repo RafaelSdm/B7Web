@@ -9,3 +9,13 @@ input[required]{
 input[name="usuario"]{
     padding: 20px;
 }
+
+a[href *="google"]{
+    color: pink;
+
+}
+
+
+a[href $= "html"]{
+    background-color: yellow;
+}
