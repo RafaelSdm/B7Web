@@ -23,3 +23,13 @@ a[href $= "html"]{
 div:empty{
     background-color: red;
 }
+
+
+p::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p::first-line{
+    background-color: violet;
+}
