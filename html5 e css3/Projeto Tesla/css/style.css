@@ -215,3 +215,35 @@ footer .down{
     animation-iteration-count: infinite;
 
 }
+
+
+/*media */
+
+
+@media (max-width: 1200px){
+    header .middle{
+        display: none;
+    }
+
+    header .rigthside li{
+        display: none;
+    }
+
+    header .rigthside li.menu{
+        display: block;
+    }
+}
+
+
+@media (max-width: 600px){
+    footer .buttons-area{
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    footer .buttons-area a{
+        margin: 10px 20px;
+        width:  calc(100vw - 60px );
+    }
+}
