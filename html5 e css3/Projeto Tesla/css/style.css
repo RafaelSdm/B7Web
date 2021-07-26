@@ -28,7 +28,7 @@ header{
     align-items: center;
     height: 50px;
     
-    background-color: red;
+    
 }
 
 header ul,
@@ -56,4 +56,33 @@ header .middle a{
     text-decoration: none;
     color: var(--header-color);
     text-transform: uppercase;
+}
+
+header .rigthside ul{
+    display: flex;
+    
+}
+
+header .rigthside li{
+    margin: 0 10px;
+}
+
+header .rigthside a{
+    text-decoration: none;
+    color: var(--header-color);
+    text-transform: uppercase;
+}
+
+header .menu-icon{
+    width: 18px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+header .menu-icon div{
+    height: 2px;
+    background-color: var(--header-color);
 }
