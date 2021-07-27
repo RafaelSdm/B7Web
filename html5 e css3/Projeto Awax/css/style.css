@@ -112,5 +112,21 @@ header{
     background-image: url('../images/complementos/bg.jpg');
     background-size: cover;
     background-position: bottom;
+    overflow: hidden;
+
+}
+
+.banner .sliders{
+    width:100vw ;
+    height: 100%;
+   
+
+}
+
+.banner .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
 
 }
