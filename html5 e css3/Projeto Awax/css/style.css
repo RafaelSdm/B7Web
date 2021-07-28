@@ -1014,3 +1014,42 @@ footer {
     height:auto;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:450px) and (max-width: 800px){
+    nav{
+        position: absolute;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.809);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+
+    }
+}
