@@ -43,6 +43,10 @@ header{
 
 }
 
+.menuopen{
+    display: none;
+}
+
 .logo-img{
     width: 80px;
     height: 80px;
@@ -1042,14 +1046,103 @@ footer {
 
 
 @media (min-width:450px) and (max-width: 800px){
+
+    .logo{
+        margin-left: 50px;
+    }
+
+    .menuopen{
+        width: 45px;
+        margin-right: 30px;
+        display: block;
+
+    }
     nav{
+        display: none;
         position: absolute;
-        z-index: 999;
-        background-color: rgba(0, 0, 0, 0.809);
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
         width: 70vw;
         height: calc(100vh - 100px);
         top: 100px;
         right: 0;
 
     }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a{
+        font-weight: bold;
+        height: 40px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: none;
+        padding: 30px;
+    }
+
+    .menu li.active a{
+        border: none;
+
+    }
+
+    .section-aboutus{
+        flex-direction: column;
+    }
+
+    .section-aboutus-left{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+       
+
+    }
+
+    .section-aboutus-left a{
+        display: inline-block;
+        margin-left: 250px;
+    }
+
+    .section-aboutus-right{
+        width: auto;
+    }
+
+
+    .section-services{
+        flex-wrap: wrap;
+    }
+
+    .section-service{
+        min-width: 50%;
+        margin-bottom: 10px;
+
+    }
+
+    .section-team{
+        max-width: 580px;
+    }
+
+    .section-map{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .section-map-area{
+        width: auto;
+    }
+
+
+    .section-map-info{
+        width: auto;
+    }
+
+    .section-map-info-item{
+        margin-bottom: 20px;
+
+    }
+
+    
+
+
 }
