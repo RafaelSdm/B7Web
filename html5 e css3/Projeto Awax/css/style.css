@@ -425,3 +425,20 @@ header{
 .section-projects-filters li:first-child{
     border-left: none;
 }
+
+
+
+.section-projects-photos{
+    width: 100vh;
+    max-width: 1140px;
+    margin-top: 20px;
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-projects-photo{
+    width: 280px;
+    
+}
