@@ -1,12 +1,14 @@
 .container{
     display: grid;
 
-    grid-template-columns: repeat(9, minmax(200px, 300px));
-    grid-auto-rows: minmax(50px, 100px);
+    grid-template-columns: repeat(3, 200px );
+    
 
     
 
     gap: 20px;
+
+    justify-content: center;
 
 }
 
