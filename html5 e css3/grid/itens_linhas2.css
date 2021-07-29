@@ -1,0 +1,45 @@
+.container{
+    background-color: #ccc;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr );
+    
+   
+
+    gap: 10px;
+
+
+
+}
+
+.item{
+    background-color: royalblue;
+
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.item7{
+    background-color: gold;
+
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 6 ;
+}
+
+.item5{
+    background-color: springgreen;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
