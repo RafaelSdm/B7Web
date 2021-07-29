@@ -1,0 +1,51 @@
+.container{
+    background-color: #ccc;
+    display: grid;
+    
+    grid-gap: 10px;
+
+   grid-template-areas: 
+    
+    "teste teste teste teste teste teste teste teste"
+    "nav nav section section section section section section"
+    " test3 test3 test3 test3 test3 test3 testando "
+   
+   
+   ;
+    
+   
+
+
+
+
+}
+
+.item{
+    background-color: royalblue;
+
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    
+}
+
+header{
+    grid-area: teste;
+}
+
+nav{
+    grid-area: nav;
+}
+
+section{
+    grid-area: section;
+}
+
+.adv{
+    grid-area: testando;
+}
+
+footer{
+    grid-area: test3;
+}
