@@ -15,6 +15,20 @@ header .line{
 
 }
 
+.button{
+    display: inline-block;
+    border: 2px solid #454545;
+    padding: 10px 30px;
+    border-radius: 3px;
+    color: #454545;
+    text-decoration: none;
+}
+
+.button:hover{
+    color: white;
+    background-color: #454545;
+}
+
 h1{
     font-size: 90px;
     font-weight: bold;
@@ -30,6 +44,9 @@ h2{
     font-family: 'Oswald', 'sans serif';
     line-height: 45px;
     margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
     
 }
 
@@ -147,6 +164,19 @@ h2{
 .area1-content{
     padding: 80px;
 }
+
+
+.area1-quote{
+    margin-bottom: 30px;
+}
+
+.area1-text{
+    margin-bottom: 50px;
+    line-height: 25px;
+}
+
+
+
 .bar{
     background-color: #117050;
     width: 168px;
