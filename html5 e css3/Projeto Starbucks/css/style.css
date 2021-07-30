@@ -108,3 +108,35 @@ header .line{
     margin-right: 40px;
 
 }
+
+
+
+
+
+
+
+
+.area1{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+
+
+
+.area1-content{
+    background-color: blue;
+}
+
+.area1-img1{
+    background-color: red;
+}
+
+.area1-img2{
+    background-color: #117050;
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
