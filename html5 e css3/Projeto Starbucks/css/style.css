@@ -203,3 +203,52 @@ h2{
     background-size: cover;
 }
 
+
+
+
+
+
+.area2{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+
+
+
+.area2-content{
+    padding: 80px;
+}
+
+
+.area2-quote{
+    margin-bottom: 30px;
+}
+
+.area2-text{
+    margin-bottom: 50px;
+    line-height: 25px;
+}
+
+
+
+.area2-img1{
+    background-color: red;
+    height: 450px;
+    background-image: url(../images/f4.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.area2-img2{
+    background-color: #117050;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url(../images/f3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
