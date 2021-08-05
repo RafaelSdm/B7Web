@@ -141,3 +141,14 @@ body{
     margin-left: 10px;
     margin-right: 10px;
 }
+
+
+
+.footer{
+    background-color: #3480c1;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    margin-top: 40px;
+}
