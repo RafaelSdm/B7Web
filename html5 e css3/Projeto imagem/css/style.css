@@ -117,3 +117,27 @@ body{
     background-color: #d09c02;
     color: antiquewhite;
 }
+
+
+
+
+.maininterno{
+    width: 1000px;
+    margin: 0 auto;
+    
+}
+
+
+.titulomain h1{
+    height: 90px;
+    font-size: 20px;
+    text-align: center;
+    
+    line-height: 90px;
+    text-transform: capitalize;
+}
+
+.fotos img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
