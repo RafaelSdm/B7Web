@@ -123,7 +123,80 @@ body{
 
 }
 
+.banner img{
+    width: 650px;
+    height: 80px;
+    
+}
+
 .logo img{
     border: 0;
     width: 230px;
+}
+
+
+
+
+.menu{
+    height: 40px;
+    background-color: red;
+}
+
+.menuint{
+    width: 100%;
+    max-width: 1040px;
+    height: 40px;
+   
+    margin: 0 auto;
+}
+
+.menuint img{
+    border: 0;
+    width: 10px;
+    cursor: pointer;
+}
+
+
+.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+.submenu{
+    width: 150px;
+    height: 150px;background-color: red;
+    position: absolute;
+    display: none;
+}
+
+.submenuitem{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.submenuitem:hover{
+    background-color: rgb(172, 16, 16);
 }
