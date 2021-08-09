@@ -26,15 +26,18 @@ body{
 
 .toporight{
     width: 50%;
-    height: 30px;
+    height: 28px;
     float: right;
+    text-align: right;
+    margin-top: 2px;
     
 }
 
 .toporight img{
     width: 26px;
     height: 26px;
-    border: 1ps solid white;
+    
+    margin-right: 3px
 }
 
 
@@ -64,5 +67,22 @@ body{
 
 .topoleft li .ativo{
     color: blue;
+
+}
+
+.topobusca{
+    width: 110px;
+    height: 23px;
+    outline: 0;
+    
+}
+
+.toporight a{
+    float: right;
+
+}
+
+.toporight input{
+    float: right;
 
 }
