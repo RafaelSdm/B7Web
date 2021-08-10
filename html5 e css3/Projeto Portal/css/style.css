@@ -268,8 +268,8 @@ body{
 
 .leftside{
     float: left;
-    background-color: #ff0000;
-    min-height: 200px;
+   
+   
     width: 753px;
 }
 
@@ -317,4 +317,30 @@ body{
 .noticia-item a{
     text-decoration: none;
     color: black;
+}
+
+
+
+.slideshow{
+    height: 335px;
+    background-color: gold;
+    overflow: hidden;
+
+
+}
+
+.slideshow-area{
+    width: 100000px;
+    height: 335px;
+    background-color: aquamarine;
+
+}
+
+
+.slide{
+    height: 335px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
