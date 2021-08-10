@@ -261,7 +261,7 @@ body{
     width: 275px;
     min-height: 200px;
     float: right;
-    background-color: rgb(105, 88, 88);
+    
     margin-left: 12px;
 
 }
@@ -271,4 +271,50 @@ body{
     background-color: #ff0000;
     min-height: 200px;
     width: 753px;
+}
+
+
+.widget{
+    background-color: white;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+
+
+}
+
+.widget-titulo{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid gray;
+    padding-left: 5px;
+    font-size: 14px;
+
+
+}
+
+.widget-conteudo{
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+
+.widget-conteudo a img{
+    width: 26px;
+    height: 26px;
+
+}
+
+
+.noticia-item{
+    font-size: 13px;
+    margin: 0 10px;
+    padding: 10px 0;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.noticia-item a{
+    text-decoration: none;
+    color: black;
 }
