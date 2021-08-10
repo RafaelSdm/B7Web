@@ -323,7 +323,7 @@ body{
 
 .slideshow{
     height: 335px;
-    background-color: gold;
+    
     overflow: hidden;
 
 
@@ -332,7 +332,7 @@ body{
 .slideshow-area{
     width: 100000px;
     height: 335px;
-    background-color: aquamarine;
+    
 
 }
 
