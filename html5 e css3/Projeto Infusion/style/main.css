@@ -512,4 +512,8 @@ img{
         grid-gap: 30px;
     }
     
+
+    .last-articles-thumbs{
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
