@@ -269,3 +269,44 @@ img{
     background-color: #242c2c;
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.last-articles{
+
+}
+
+.last-articles-title{
+    background-color: #63c6ae;
+    padding: 5px 0;
+}
+
+.last-articles-title h2{
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+
+
+.last-articles-thumbs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 0;
+}
+
+.last-articles-thumbs img{
+    display: block;
+    width: 100%;
+}
