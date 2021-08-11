@@ -438,6 +438,10 @@ img{
 
 }
 
+.footer-logo{
+    text-transform: uppercase;
+}
+
 
 
 
@@ -515,5 +519,24 @@ img{
 
     .last-articles-thumbs{
         grid-template-columns: repeat(6, 1fr);
+    }
+
+
+
+
+
+
+
+
+
+
+    .footer .container{
+        display: flex;
+
+
+    }
+
+    .footer .container > *{
+        margin: 1.5em;
     }
 }
