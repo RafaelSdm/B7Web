@@ -5,8 +5,13 @@
     $body.classList.add('js') 
 
 
-    var $btnMenu = document.querySelector('.header-btn-menu');
-    $btnMenu.removeAttribute('style');
+    
 
+
+    var menu = new menu({
+        container: 'header__nav',
+        toggleBtn: 'header-btn-menu',
+        widthEnable: 1024
+    })
 
 })()
