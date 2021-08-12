@@ -11,7 +11,7 @@
     var menu = new menu({
         container: 'header__nav',
         toggleBtn: 'header-btn-menu',
-        widthEnable: 1024
+        widthEnable: 1024 
     })
 
 })()
