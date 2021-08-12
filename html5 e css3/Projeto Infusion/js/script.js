@@ -5,4 +5,8 @@
     $body.classList.add('js') 
 
 
+    var $btnMenu = document.querySelector('.header-btn-menu');
+    $btnMenu.removeAttribute('style');
+
+
 })()
