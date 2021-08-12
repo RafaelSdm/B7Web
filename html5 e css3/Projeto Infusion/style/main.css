@@ -60,6 +60,11 @@ img{
     text-transform: uppercase;
 }
 
+.js .header{
+    position: fixed;
+    width: 100%;
+}
+
 .header__nav a{
     text-decoration: none;
     color: white;
