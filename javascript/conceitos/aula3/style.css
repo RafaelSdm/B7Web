@@ -1,0 +1,21 @@
+.azul{
+    background-color: rgb(121, 121, 202);
+}
+
+
+.vermelho{
+    background-color: rgb(209, 74, 74);
+}
+
+.oculto{
+    display: none;
+}
+
+.verde{
+    background-color: rgb(66, 155, 66);
+}
+
+
+#telefone{
+    display: none;
+}
