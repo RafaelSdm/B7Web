@@ -124,12 +124,31 @@ c('.pizzaInfo--addButton').addEventListener('click', ()=>{
     let size = parseInt( c('.pizzaInfo--size.selected').getAttribute('data-key'));
     console.log(`tamamho: ${size}`);
 
-    cart.push({
-        id:pizzaJson[modalKey].id,
-        size,
-        qt:modalQt
+
+    let identifier = pizzaJson[modalKey].id+'0'+size;
+
+
+    let key = cart.findIndex((item)=>{
+        return item.identifier == identifier;
     })
 
+    if(key > -1){
+
+        cart[key].qt += modalQt;
+
+    }else{
+
+        cart.push({
+            identifier,
+            id:pizzaJson[modalKey].id,
+            size,
+            qt:modalQt
+        })
+    
+
+    }
+
+   
 
 
     // quantas pizzas?
