@@ -9,6 +9,7 @@ let numeros = document.querySelector('.d-1-3')
 let etapaAtual  =0;
 let numero = '';
 let branco1 = false;
+let votos = [];
 
 
 function comecarEtapa(){
@@ -125,10 +126,18 @@ function confirma(){
     let votoConfirmado = false;
     if(branco1 === true){
         votoConfirmado = true;
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: 'branco'
+        })
         console.log('confirme')
 
     }else if(numero.length === etapa.numeros){
         votoConfirmado = true
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: numero;
+        })
         console.log('cofimrmado numeoss')
 
 
@@ -141,7 +150,8 @@ function confirma(){
         if(etapas[etapaAtual] !== undefined){
             comecarEtapa();
         }else{
-            console.log("FIM");
+           // console.log("FIM");
+           document.querySelector('.tela').innerHTML = '<div class="aviso--grande-big pisca">FIM </div>'
         }
         
     }

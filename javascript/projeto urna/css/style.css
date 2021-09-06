@@ -195,3 +195,12 @@ body{
     font-weight: bold;
     
 }
+
+.aviso--grande-big{
+    font-size: 70px;
+    font-weight: bold;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
