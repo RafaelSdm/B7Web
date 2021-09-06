@@ -8,6 +8,7 @@ let numeros = document.querySelector('.d-1-3')
 
 let etapaAtual  =0;
 let numero = '';
+let branco1 = false;
 
 
 function comecarEtapa(){
@@ -15,7 +16,8 @@ function comecarEtapa(){
     let etapa = etapas[etapaAtual];
 
     let numeroHTML = '';
-
+    numero = '';
+    branco1 = false;
     for(let i =0; i< etapa.numeros;i++){
         if(i==0){
             numeroHTML += '<div class="numero pisca"></div>'
@@ -59,7 +61,12 @@ function atualizarInterface(){
     let fotosHTML = '';
 
     for(let i in candidato.fotos){
-        fotosHTML += `<div class="d-1-image"><img src="images/${candidato.fotos[i].url}"alt="">${candidato.fotos[i].legenda}</div>`
+            if(candidato.fotos[i].small){
+            fotosHTML += `<div class="d-1-image small"><img src="images/${candidato.fotos[i].url}"alt="">${candidato.fotos[i].legenda}</div>`
+        }else{
+            fotosHTML += `<div class="d-1-image "><img src="images/${candidato.fotos[i].url}"alt="">${candidato.fotos[i].legenda}</div>`
+
+        }
     }
 
     lateral.innerHTML = fotosHTML;
@@ -95,15 +102,54 @@ function clicou(n){
 }
 
 function branco(){
-    alert('clicou em branco')
+    if(numero === ''){
+        branco1 = true;
+        seuVoto.style.display = 'block';
+        aviso.style.display = 'block';
+        numeros.innerHTML = '';
+        desc.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO </div>'
+        lateral.innerHTML = '';
+
+        
+
+    }else{
+        window.alert("Para votar em branco, nao pode ter digitado numero");
+                
+    }
+  //  alert('clicou em branco')
 }
 
 function confirma(){
-    alert('clicou em confirma')
+    let etapa = etapas[etapaAtual];
+
+    let votoConfirmado = false;
+    if(branco1 === true){
+        votoConfirmado = true;
+        console.log('confirme')
+
+    }else if(numero.length === etapa.numeros){
+        votoConfirmado = true
+        console.log('cofimrmado numeoss')
+
+
+    }
+
+
+
+    if(votoConfirmado){
+        etapaAtual++;
+        if(etapas[etapaAtual] !== undefined){
+            comecarEtapa();
+        }else{
+            console.log("FIM");
+        }
+        
+    }
+ //   alert('clicou em confirma')
 }
 
 function corrige(){
-    alert('clicou em corrige')
+    comecarEtapa();
 }
 
 
