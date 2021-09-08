@@ -52,6 +52,22 @@ let validator = {
 
                     case 'min':
 
+                    if(input.value.length < rDetails[1]){
+                        return `campo deve ter pelo menos ${rDetails} caracteres`
+                    }
+
+                    break;
+
+                    case 'email':
+
+                        if(input.value != ''){
+                            let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+                            if(regex.test(input.value.toLowerCase())){
+                                return "email digitado nao e valido"
+                            }
+                        }
+
                     break;
                 }
             }
