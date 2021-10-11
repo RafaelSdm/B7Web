@@ -1,4 +1,4 @@
-function firstLetterUpperCase(nome: string){
+function firstLetterUpperCase(nome: string): string{
 
     let firstLetter = nome.charAt(0).toUpperCase();
 
@@ -7,5 +7,13 @@ function firstLetterUpperCase(nome: string){
 }
 
 
-firstLetterUpperCase('rafael');
+let nome: string = firstLetterUpperCase('rafael');
 
+
+
+function somar(n1: number,n2 :number): number{
+    return n1+ n2;
+}
+
+
+let res = somar(89,99);
