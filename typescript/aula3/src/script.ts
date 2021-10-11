@@ -1,5 +1,11 @@
-let nome: string = 'Rafael';
+let nomes: string[] = ['rafael', 'pedro', 'joao'];
 
-let idade: number =  28;
+let numero: number[] =[1,2,3,4];
 
-let programador: boolean = true;
+
+let numeros: Array<number> = [4,5,6,7]
+
+
+numero.push(12);
+
+nomes.push('ze');
