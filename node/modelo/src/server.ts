@@ -8,6 +8,11 @@ import mainRoutes  from './routes/index'
 import painelRoutes from './routes/painel'
 
 
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+
 const server = express()
 
 //console.log(path.join(__dirname, '../public'));
