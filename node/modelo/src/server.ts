@@ -19,6 +19,9 @@ server.set('views', path.join(__dirname, 'views') )
 server.engine('mustache', mustache());
 
 
+server.use(express.urlencoded({extended: true}))
+
+
 
 
 
