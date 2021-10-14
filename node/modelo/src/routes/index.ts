@@ -4,7 +4,7 @@ const router = Router();
 
 
 router.get('/', (req:Request, res: Response) =>{
-    res.send('hello world :)');
+    res.render('home');
 })
 
 
