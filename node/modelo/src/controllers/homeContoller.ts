@@ -2,6 +2,8 @@
 
 import {Request, Response} from 'express'
 
+import {Product} from '../models/Product'
+
 
 export const home = (req:Request, res: Response) =>{
     let user = {
@@ -14,17 +16,20 @@ export const home = (req:Request, res: Response) =>{
     if(user.age > 50){
         showOld = true
     }
+
+
+    let list = Product.getAll();
+
+    let expensiveList = Product.getPriceAfter(30);
+
+
     res.render('pages/home', {
         user: user,
         user1: 'damasceno' ,
         showWelcome: true,
         showOld: showOld,
-        products:[
-
-            {title: 'Produto X', price: 10},
-            {title: 'Produto y', price: 20},
-            {title: 'Produto w', price: 40}
-        ],
+        products: list,
+        expensive: expensiveList,
 
         lista:[
           
