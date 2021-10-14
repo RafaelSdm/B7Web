@@ -1,0 +1,61 @@
+{{>partials/header}}
+
+    {{#showWelcome}}
+
+        <p>Seja bem vindo  {{user.name}} {{user1}} voce ja tem {{user.age}} anos!!!<p>
+
+    {{/showWelcome}}
+
+
+    {{#showOld}}
+
+        Voce é idoso
+
+    {{/showOld}}
+
+    {{^showOld}}
+        Voce é jovem
+    {{/showOld}}
+
+
+
+    <hr/>
+
+
+    <h2>Produtos<h/h2>
+
+
+    <ul>
+
+
+        {{#products}}
+
+            {{>partials/productItem}}
+            
+
+        {{/products}}
+
+    </ul>
+
+    <hr/>
+
+
+    <h2>Frases<h/h2>
+
+
+    <ul>
+
+
+        {{#lista}}
+
+            <li>{{.}}</li>
+
+        {{/lista}}
+        {{^lista}}
+            Sem frases na lista
+        {{/lista}}
+
+    </ul>
+
+
+{{>partials/footer}}
