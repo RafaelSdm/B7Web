@@ -40,10 +40,26 @@ export const home = async (req: Request, res: Response)=>{
             },
 
             */
+
+            /*
             name: {
                 [Op.like]: 'ra%'
             }
-    }
+
+            */
+
+            age:{
+                [Op.gte]: 15
+            }
+
+           
+
+           
+    },
+        order: [
+           // ['name', 'DESC'] // DECRESCENTE ASC CRESCENTE
+           ['age','DESC']
+        ]
     });
 
     
