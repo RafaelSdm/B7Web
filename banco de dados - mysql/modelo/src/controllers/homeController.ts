@@ -1,23 +1,34 @@
 import { Request, Response } from 'express';
+import { json } from 'sequelize';
 
-import {sequelize} from '../instances/mysql'
+
 
 import { Product } from '../models/Product';
 
+
+import { User } from '../models/User'
+
 export const home = async (req: Request, res: Response)=>{
 
+
+
+    let users = await User.findAll();
+
     
+    //console.log("usuarios,",  JSON.stringify(users));
 
-    try{
 
-        await sequelize.authenticate();
 
-        console.log("conexao estabelecida")
 
-    }catch(error){
-        console.log("Deu problema:", error)
-    }
 
+
+
+
+
+
+
+
+  
     
 
 
@@ -38,6 +49,7 @@ export const home = async (req: Request, res: Response)=>{
         showOld,
         products: list,
         expensives: expensiveList,
-        frasesDoDia: []
+        frasesDoDia: [],
+        users: users
     });
 };
