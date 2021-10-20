@@ -13,6 +13,7 @@ import { User } from '../models/User'
 
 export const home = async (req: Request, res: Response)=>{
 
+    const users = await User.findAll();
 
     const user = User.build({
         name: 'teste',
@@ -31,28 +32,7 @@ export const home = async (req: Request, res: Response)=>{
     
     
 
-        
-
-
     
-
-    
-    //console.log("usuarios,",  JSON.stringify(users));
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-
 
 
     let age: number = 90;
@@ -72,6 +52,23 @@ export const home = async (req: Request, res: Response)=>{
         products: list,
         expensives: expensiveList,
         frasesDoDia: [],
+        users: users
         
     });
 };
+
+export const novoUsuario = async (req: Request, res: Response) => {
+    let { name, age } = req.body;
+
+    if(name) {
+        const newUser = User.build({ name });
+
+        if(age) {
+            newUser.age = parseInt(age);
+        }
+
+        await newUser.save();
+    }
+
+    res.redirect('/');
+}
