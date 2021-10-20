@@ -2,6 +2,9 @@ import { Request, Response } from 'express';
 import { json } from 'sequelize';
 
 
+import {Op} from 'sequelize'
+
+
 
 import { Product } from '../models/Product';
 
@@ -12,7 +15,36 @@ export const home = async (req: Request, res: Response)=>{
 
 
 
-    let users = await User.findAll();
+    let users = await User.findAll({
+        where: {
+           // name: 'rafael',
+           /*
+            [Op.or]: [
+                {age: 18},
+                {name: 'rafael'}
+            ] */
+
+            /*
+
+            age:{
+                //[Op.gt]: 25,// > 25
+                //[Op.gte]: 20,// >= 25
+                //[Op.lt]: 34, // < 40
+               // [Op.between]: [17, 21], // entre 17 e 21
+
+              //  [Op.in]: [20,18], //  pegar estes
+               // [Op.notIn]: [34] // negar estes
+
+
+                
+            },
+
+            */
+            name: {
+                [Op.like]: 'ra%'
+            }
+    }
+    });
 
     
     //console.log("usuarios,",  JSON.stringify(users));
