@@ -14,55 +14,27 @@ import { User } from '../models/User'
 export const home = async (req: Request, res: Response)=>{
 
 
-
-    let users = await User.findAll({
-        where: {
-           // name: 'rafael',
-           /*
-            [Op.or]: [
-                {age: 18},
-                {name: 'rafael'}
-            ] */
-
-            /*
-
-            age:{
-                //[Op.gt]: 25,// > 25
-                //[Op.gte]: 20,// >= 25
-                //[Op.lt]: 34, // < 40
-               // [Op.between]: [17, 21], // entre 17 e 21
-
-              //  [Op.in]: [20,18], //  pegar estes
-               // [Op.notIn]: [34] // negar estes
-
-
-                
-            },
-
-            */
-
-            /*
-            name: {
-                [Op.like]: 'ra%'
-            }
-
-            */
-
-            age:{
-                [Op.gte]: 15
-            }
-
-           
-
-           
-    },
-        order: [
-           // ['name', 'DESC'] // DECRESCENTE, ASC CRESCENTE
-           ['age','DESC']
-        ],
-        offset: 2,
-        limit: 2
+    const user = User.build({
+        name: 'teste',
+        age: 2
     });
+
+   // await user.save();
+
+
+   // create
+
+   const user1 = await User.create({
+       name: 'eduardo',
+       age: 90
+   })
+    
+    
+
+        
+
+
+    
 
     
     //console.log("usuarios,",  JSON.stringify(users));
@@ -100,6 +72,6 @@ export const home = async (req: Request, res: Response)=>{
         products: list,
         expensives: expensiveList,
         frasesDoDia: [],
-        users: users
+        
     });
 };
