@@ -13,22 +13,37 @@ import { User } from '../models/User'
 
 export const home = async (req: Request, res: Response)=>{
 
+
+    await User.update({age: 18}, {
+        where:{
+            age:{
+                [Op.lt]: 18
+            }
+        }
+    })
+
     const users = await User.findAll();
 
+
+    /*
     const user = User.build({
         name: 'teste',
         age: 2
     });
 
    // await user.save();
-
+    */
 
    // create
+
+   /*
 
    const user1 = await User.create({
        name: 'eduardo',
        age: 90
    })
+
+   */
     
     
 
