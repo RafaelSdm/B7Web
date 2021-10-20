@@ -57,9 +57,11 @@ export const home = async (req: Request, res: Response)=>{
            
     },
         order: [
-           // ['name', 'DESC'] // DECRESCENTE ASC CRESCENTE
+           // ['name', 'DESC'] // DECRESCENTE, ASC CRESCENTE
            ['age','DESC']
-        ]
+        ],
+        offset: 2,
+        limit: 2
     });
 
     
