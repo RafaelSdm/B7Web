@@ -33,8 +33,8 @@ export const home = async (req: Request, res: Response)=>{
     let expensiveList = Product.getFromPriceAfter(12);
 
     res.render('pages/home', {
-        name: 'Bonieky',
-        lastName: 'Lacerda',
+        name: 'Rafael',
+        lastName: 'Damasceno',
         showOld,
         products: list,
         expensives: expensiveList,
