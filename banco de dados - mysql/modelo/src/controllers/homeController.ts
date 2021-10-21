@@ -9,7 +9,9 @@ import {Op} from 'sequelize'
 import { Product } from '../models/Product';
 
 
-import { User } from '../models/User'
+import { User } from '../models/User';
+
+import {UserInstance} from '../models/User'
 
 export const home = async (req: Request, res: Response)=>{
 
@@ -23,6 +25,25 @@ export const home = async (req: Request, res: Response)=>{
     })
 
     const users = await User.findAll();
+
+
+
+    let result = await User.findAll({
+        where:{
+            id: 7
+        }
+    })
+
+    if(result.length > 0){
+        let usuario: UserInstance  = result[0];
+
+        usuario.age = 800;
+        usuario.name = 'joao das couve'
+
+        await usuario.save();
+    }
+
+    //console.log(`rresults: ${result}`);
 
 
     /*
@@ -80,6 +101,7 @@ export const novoUsuario = async (req: Request, res: Response) => {
 
         if(age) {
             newUser.age = parseInt(age);
+            
         }
 
         await newUser.save();
