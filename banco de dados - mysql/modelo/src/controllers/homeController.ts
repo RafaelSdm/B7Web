@@ -43,6 +43,29 @@ export const home = async (req: Request, res: Response)=>{
         await usuario.save();
     }
 
+
+
+    await User.destroy({
+        where:{
+            age:{
+                [Op.lte]: 18
+            }
+        }
+    })
+
+
+    let result2 = await User.findAll({
+        where:{
+            id: 2
+        }
+    })
+
+    if(result2.length > 0){
+        let usuario1: UserInstance = result2[0];
+
+        await usuario1.destroy();
+    }
+
     //console.log(`rresults: ${result}`);
 
 
