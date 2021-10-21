@@ -16,9 +16,12 @@ import {UserInstance} from '../models/User'
 export const home = async (req: Request, res: Response)=>{
 
 
+
+        
+
     let usuario = await User.findOne({
         where:{
-            name: 'rafael',
+            name: 'RAFAEL',
         }
     })
 
@@ -45,12 +48,12 @@ export const home = async (req: Request, res: Response)=>{
 
     const [usuario3, created] = await User.findOrCreate({
         where:{
-            name: 'rafael',
+            name: 'RAFAEL',
             
         },
 
         defaults:{
-            name: 'rafael',
+            name: 'RAFAEL',
             age: 97
         }
     })

@@ -6,7 +6,7 @@ import {sequelize} from '../instances/mysql';
 export interface UserInstance extends Model{
     id: number,
     name: string,
-    age: number
+    age: number,
 }
 
 
@@ -18,13 +18,26 @@ export const User = sequelize.define<UserInstance>("User", {
     },
 
     name: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        
     },
 
     age: {
         type: DataTypes.INTEGER,
-        defaultValue: 18
+        defaultValue: 18,
+        set(value: number){
+            let newAge: number = value
+            if(newAge < 18){
+
+                value = 18;
+                
+            }
+
+            this.setDataValue('age', value);
+        }
     }
+
+   
 }, {
 
     tableName: 'users',
