@@ -32,7 +32,17 @@ Opa {{name}} {{lastName}}, tudo bem?
 
     {{#users}}
 
-        <li> {{id}}  -  {{name}} - Idade: {{age}} </li>
+        <li> 
+        {{id}}  -  
+        {{name}} - 
+        Idade: {{age}}  
+        - <a href="/usuario/{{id}}/mais">+</a>   
+        - <a href="/usuario/{{id}}/menos">-</a>  
+        - <a href="/usuario/{{id}}/excluir">excluir</a>  
+        
+        
+        
+        </li>
 
     {{/users}}
 
