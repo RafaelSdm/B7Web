@@ -16,6 +16,53 @@ import {UserInstance} from '../models/User'
 export const home = async (req: Request, res: Response)=>{
 
 
+    let usuario = await User.findOne({
+        where:{
+            name: 'rafael',
+        }
+    })
+
+    //console.log("usuario 1 findonde ", usuario)
+
+    if(usuario){
+        console.log(`o usuário ${usuario.name} tem ${usuario.age} anos`);
+    }else{
+        console.log("usuario nao encotrado");
+    }
+
+
+    let usuario2 = await User.findByPk(16);
+
+    if(usuario2){
+        console.log(`o usuário ${usuario2.name} tem ${usuario2.age} anos`);
+    }else{
+        console.log("usuario nao encontrado");
+    }
+
+
+
+
+
+    const [usuario3, created] = await User.findOrCreate({
+        where:{
+            name: 'rafael',
+            
+        },
+
+        defaults:{
+            name: 'rafael',
+            age: 97
+        }
+    })
+
+    console.log("Usuario 3 - ", usuario3);
+    console.log("Created 3 - ", created);
+
+
+
+
+
+
     await User.update({age: 18}, {
         where:{
             age:{
