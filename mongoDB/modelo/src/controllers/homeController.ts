@@ -25,8 +25,9 @@ export const home = async (req: Request, res: Response)=>{
        //"name.firstName": 'Rafael'
        //interests: "programação"
 
-       age: {$gt: 47, $lt:70} 
-   })
+      // age: {$gt: 47, $lt:70} 
+        age: {$gt: 18}
+   }).sort({age: -1, name: 1}); // -1 DESC 1 ASC
 
    // gt maior que 
    // gte maior igual 
