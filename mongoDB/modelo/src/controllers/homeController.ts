@@ -34,10 +34,16 @@ export const home = async (req: Request, res: Response)=>{
 
    */
 
+   /*
 
    let usuarios = await User.find({
         age:{$gt: 18}
    }).skip(1).limit(1); // pular e mostrar 
+
+   */
+
+
+
 
    // gt maior que 
    // gte maior igual 
@@ -48,7 +54,55 @@ export const home = async (req: Request, res: Response)=>{
 
 
 
-    console.log("Usuários: ", usuarios);
+   // console.log("Usuários: ", usuarios);
+
+
+
+
+   /*
+   let newUser = await User.create({
+       name:{
+           firstName: 'ana',
+           lastName: 'nornonha'
+       },
+
+       email: 'ana@gmail.com',
+       age: 234,
+       interests: ['jogos' , 'esportes']
+
+   });
+
+
+   console.log('Novo usuario:', newUser);
+
+   */
+
+
+
+   let newUser1 = await new User();
+
+   newUser1.name = {
+       firstName: "Amoedo",
+       lastname: "Caralho" 
+   };
+
+   newUser1.age = 56;
+   newUser1.email = 'amoedo@gmail.com';
+   newUser1.interests = ["eletronica"]
+
+
+   let resultado = await newUser1.save();
+
+
+   console.log("Novo usuario1: ", resultado);
+
+   
+
+
+
+
+
+
 
 
     let age: number = 90;
