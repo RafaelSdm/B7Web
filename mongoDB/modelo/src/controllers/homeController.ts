@@ -8,7 +8,35 @@ import User from '../models/User'
 export const home = async (req: Request, res: Response)=>{
 
 
-    let usuarios =  await User.find({});
+   // let usuarios =  await User.find({});
+
+   /*
+
+   let usuarios = await User.findOne({
+       email: 'marcelo@gmail.com'
+   })
+
+   */
+
+   // let usuarios = await User.findById('61731414b4bb340c4509621e')
+
+
+   let usuarios = await User.find({
+       //"name.firstName": 'Rafael'
+       //interests: "programação"
+
+       age: {$gt: 47, $lt:70} 
+   })
+
+   // gt maior que 
+   // gte maior igual 
+   // lt menor que  
+   // lte menor igual
+
+
+
+
+
     console.log("Usuários: ", usuarios);
 
 
