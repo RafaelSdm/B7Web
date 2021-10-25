@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import User from '../models/User';
 
 export const nome = (req: Request, res: Response) => {
     let nome: string = req.query.nome as string;
@@ -30,3 +31,19 @@ export const idadeAction = (req: Request, res: Response) => {
         mostrarIdade
     });
 };
+
+
+
+export const incremmentAgeAction = async (req: Request, res: Response) =>{
+    try{
+        let user = await User.findById(req.params.id);
+        console.log("usuario encontrado");
+        user.age++;
+        await user.save();
+    }catch(error){
+        console.log("usuario nao encontrado", error)
+    }
+
+
+    res.redirect('/')
+}

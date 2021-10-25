@@ -10,6 +10,7 @@ const router = Router();
 router.get('/', HomeController.home);
 
 router.post('/novo-usuario', HomeController.addUserAction);
+router.get('/usuario/:id/addidade', UserController.incremmentAgeAction)
 
 router.get('/contato', InfoController.contato);
 router.get('/sobre', InfoController.sobre);
