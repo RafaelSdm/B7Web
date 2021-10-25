@@ -105,6 +105,44 @@ export const home = async (req: Request, res: Response)=>{
    */
 
 
+   // atualizando vários dados de uma vez
+
+
+   /*
+
+   await User.updateMany(
+       {age: {$gte: 100}},
+       {age: 18}
+   )
+
+   */
+
+
+
+   // atualizando dados de uma só ususario
+
+   /*
+
+
+   await User.updateOne(
+       {email:"rafaeldamasceno2000@gmail.com"},
+       {age: 45}
+   )
+
+   */
+
+
+   let user = await User.findOne({email: 'rafaeldamasceno2000@gmail.com'})
+
+   user.name.firstName = 'Raphael';
+   await user.save();
+
+
+
+
+   
+
+
    
 
 
