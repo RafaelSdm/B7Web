@@ -132,10 +132,47 @@ export const home = async (req: Request, res: Response)=>{
    */
 
 
+   // procurando usuário
+
+   /*
+
+
    let user = await User.findOne({email: 'rafaeldamasceno2000@gmail.com'})
 
    user.name.firstName = 'Raphael';
    await user.save();
+
+   */
+
+
+
+   // jeito mais simples de deletar
+
+   /*
+
+   await User.findOneAndDelete(
+       {email:"rafaeldamascenovidaloka@hotmail.com"}
+   )
+
+
+   */
+
+
+   // remover atraves do usuario
+
+   /*
+
+
+   let user = await User.findOne(
+    
+
+    {email: 'paulo@gmail.com'}
+   )
+
+   await user.remove();
+
+   */
+
 
 
 
