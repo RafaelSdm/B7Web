@@ -79,6 +79,11 @@ export const home = async (req: Request, res: Response)=>{
 
 
 
+
+   /*
+
+
+
    let newUser1 = await new User();
 
    newUser1.name = {
@@ -96,31 +101,53 @@ export const home = async (req: Request, res: Response)=>{
 
    console.log("Novo usuario1: ", resultado);
 
+
+   */
+
+
    
 
 
+   let users = await User.find({}).sort({"name.firstName": 1});
 
 
 
 
 
+   res.render('pages/home',{
+       users
+   });
 
-    let age: number = 90;
-    let showOld: boolean = false;
 
-    if(age > 50) {
-        showOld = true;
+
+
+};
+
+
+export const addUserAction = async(req: Request, res:Response ) =>{
+
+    try{
+        let newUser = await User.create({
+            name: {
+                firstName: req.body.firstName,
+                lastName: req.body.lastName
+            
+
+            
+            },
+            email: req.body.email,
+            age: parseInt(req.body.age),
+            interests: req.body.interests.split(',')
+        });
+
+        console.log("usuario adicionado com sucesso");
+    }catch(error){
+
+        console.log("usuario nao adiconado", error)
+
     }
 
-    let list = Product.getAll();
-    let expensiveList = Product.getFromPriceAfter(12);
 
-    res.render('pages/home', {
-        name: 'Bonieky',
-        lastName: 'Lacerda',
-        showOld,
-        products: list,
-        expensives: expensiveList,
-        frasesDoDia: []
-    });
-};
+    res.redirect('/');
+
+}
