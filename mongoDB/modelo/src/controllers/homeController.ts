@@ -115,7 +115,7 @@ export const home = async (req: Request, res: Response)=>{
 
 
    res.render('pages/home',{
-       users
+       users: users
    });
 
 
