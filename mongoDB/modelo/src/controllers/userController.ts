@@ -47,3 +47,5 @@ export const incremmentAgeAction = async (req: Request, res: Response) =>{
 
     res.redirect('/')
 }
+
+
