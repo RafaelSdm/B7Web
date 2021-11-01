@@ -123,21 +123,41 @@ function App(){
  }
 
 
+
+ const [isLogged, setIsLogged] = useState(false);
+
+
   return (
     <>
 
-     <Input type="email" placeholder="informe um email" value={email} onChange={handleEmailInput}></Input>
-     
-     <Input type="password" placeholder="informe uma senha" value={senha} onChange={handleSenhaInput}></Input>
-
-     <button onClick={handBotao}> Mostrar</button>
-    
-
-
+      <Input type="email" placeholder="informe um email" value={email} onChange={handleEmailInput}></Input>
       
+      <Input type="password" placeholder="informe uma senha" value={senha} onChange={handleSenhaInput}></Input>
+
+      <button onClick={handBotao}> Mostrar</button>
+
+
+      {email.length > 0 && 
+      
+      <p>{email.length} caractere{email.length != 1 ? 's' : ''}</p>
+      
+      }  
+
+      {isLogged == true &&
+
+        <button>Sair</button>
+      
+      }
+
+      {isLogged == false &&
+
+        <button>Fazer login</button>
+      
+      }
 
 
 
+      {isLogged ? <button>Sair</button> : <button>fazer login</button>}
 
     </>
   )
