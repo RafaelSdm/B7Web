@@ -1,7 +1,8 @@
 
-import React from "react";
+import React, {useState} from "react";
 //import './App.css'
 import styled from 'styled-components'
+
 
 
 /*
@@ -86,18 +87,21 @@ const Botao = styled.button`
 
 function App(){
 
-  
+  const [ contador, setContador  ] = useState(0);
+
+  const botaoAction = () =>{
+    setContador(contador+1);
+  }
 
   
   return (
-    <Site>
+    <>
 
-      <Title>Titulo da web</Title>
-      <Botao ativo={true}>Clique aqui</Botao>
-      <Botao ativo={false}>Clique aqui</Botao>
+      <div> {contador} vezes </div>
 
+      <button onClick={botaoAction}>Clique para aumentar</button>
 
-    </Site>
+    </>
   )
 
    
