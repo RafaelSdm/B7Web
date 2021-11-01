@@ -1,6 +1,7 @@
 
 import React from "react";
 //import './App.css'
+import styled from 'styled-components'
 
 
 /*
@@ -31,6 +32,7 @@ let App = () =>{
 */
 
 
+/*
 
 function Avatar(props){
   return (
@@ -45,6 +47,41 @@ function Avatar(props){
 
 }
 
+*/
+
+
+/*
+
+
+const Title = styled.h1`
+
+  color: red;
+  font-size:23px
+
+
+
+`;
+
+const Site = styled.div`
+
+  width:400px;
+  height: 500px;
+  background-color: blue;
+
+
+`;
+
+const Botao = styled.button`
+
+  font-size;19px;
+  padding: 10px;
+  background-color: ${props => props.ativo == true ? 'pink': 'red'};
+  color: ${props => props.ativo == true ? 'blue': 'black'};
+`;
+
+
+*/
+
 
 
 function App(){
@@ -52,15 +89,23 @@ function App(){
   
 
   
-  return <>
+  return (
+    <Site>
 
-    <Avatar url='https:/www.google.com.br/google.jpg' name='Rafael' />
+      <Title>Titulo da web</Title>
+      <Botao ativo={true}>Clique aqui</Botao>
+      <Botao ativo={false}>Clique aqui</Botao>
+
+
+    </Site>
+  )
+
+   
     
     
     
    
 
-  </>;
 }
 
 export default App;
