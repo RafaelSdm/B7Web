@@ -30,29 +30,36 @@ let App = () =>{
 */
 
 
-function formatarNome(user){
-  return user.nome +' '+user.sobrenome;
+
+function Avatar(props){
+  return (
+    <div>
+    
+        <img src={props.url} alt={props.name}/>
+        <br/>
+        <span>{props.name}</span>
+    </div>
+  );
+    
+
 }
 
 
 
 function App(){
 
-  let nome = 'Rafael';
-  let user = {
-    nome: 'joao',
-    sobrenome:'silva'
-  }
-
-  let imagem = 'https:/www.google.com.br/google.jpg';
+  
 
   
   return <>
-    
-    
-    <img src={imagem}/>
 
-  </>
+    <Avatar url='https:/www.google.com.br/google.jpg' name='Rafael' />
+    
+    
+    
+   
+
+  </>;
 }
 
 export default App;
