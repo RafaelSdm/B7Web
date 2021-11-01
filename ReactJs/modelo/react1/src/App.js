@@ -1,5 +1,6 @@
-/* eslint-disable jsx-a11y/alt-text */
+
 import React from "react";
+//import './App.css'
 
 
 /*
@@ -33,7 +34,7 @@ let App = () =>{
 
 function Avatar(props){
   return (
-    <div>
+    <div style={{backgroundColor: '#FF0000', padding: 20, width: 400}}>
     
         <img src={props.url} alt={props.name}/>
         <br/>
