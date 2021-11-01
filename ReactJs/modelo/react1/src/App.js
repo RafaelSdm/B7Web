@@ -127,6 +127,19 @@ function App(){
  const [isLogged, setIsLogged] = useState(false);
 
 
+ const [valorConta, setValorConta] = useState(10);
+
+ const handleContaInput = (e) =>{
+   setValorConta(parseFloat(e.target.value));
+ }
+
+ const [valorGorgeta, setValorGorgeta] = useState(0);
+
+ const handleGorgetaInput = (e) =>{
+   setValorGorgeta(parseInt(e.target.value))
+ }
+
+
   return (
     <>
 
@@ -158,6 +171,31 @@ function App(){
 
 
       {isLogged ? <button>Sair</button> : <button>fazer login</button>}
+
+      <br/>
+
+      <h1>Gorjetas</h1>
+
+      <Input type="number" placeholder="informe o preço" value={valorConta} onChange={handleContaInput}></Input>
+
+      <Input type="number" placeholder="informe a porcentagem da gorgeta" value={valorGorgeta} onChange={handleGorgetaInput}></Input>
+
+
+      <br/>
+
+      {valorConta > 0 &&
+
+        <div>
+
+          <h4>Conta Parcial: R${valorConta}</h4>
+          <h4>Conta da gorgeta: {valorGorgeta} - R${(valorGorgeta/100) * valorConta} </h4>
+          <h1>Total da conta: R${(valorGorgeta/100 ) * 100 + valorConta}</h1>
+          
+        </div>
+      
+      
+      }
+
 
     </>
   )
