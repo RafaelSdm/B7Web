@@ -84,22 +84,60 @@ const Botao = styled.button`
 */
 
 
+const Input = styled.input`
+
+  width:400px;
+  height:30px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid black
+
+`
+
 
 function App(){
 
-  const [ contador, setContador  ] = useState(0);
+  //const [ contador, setContador  ] = useState(0);
 
-  const botaoAction = () =>{
-    setContador(contador+1);
-  }
+ // const botaoAction = () =>{
+   // setContador(contador+1);
+ // }
 
+ const [email, setEmail] = useState('');
+ const handleEmailInput = (e) =>{
+
+    setEmail(e.target.value);
+
+ }
+
+ const [senha, setSenha] = useState('');
+
+ const handleSenhaInput = (e) =>{
+   setSenha(e.target.value);
+ }
   
+
+
+ const handBotao = () =>{
+   window.alert(`${email} - ${senha}`)
+ }
+
+
   return (
     <>
 
-      <div> {contador} vezes </div>
+     <Input type="email" placeholder="informe um email" value={email} onChange={handleEmailInput}></Input>
+     
+     <Input type="password" placeholder="informe uma senha" value={senha} onChange={handleSenhaInput}></Input>
 
-      <button onClick={botaoAction}>Clique para aumentar</button>
+     <button onClick={handBotao}> Mostrar</button>
+    
+
+
+      
+
+
+
 
     </>
   )
