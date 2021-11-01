@@ -1,5 +1,5 @@
 
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 //import './App.css'
 import styled from 'styled-components'
 
@@ -103,6 +103,9 @@ function App(){
    // setContador(contador+1);
  // }
 
+
+ /*
+
  const [email, setEmail] = useState('');
  const handleEmailInput = (e) =>{
 
@@ -139,11 +142,17 @@ function App(){
    setValorGorgeta(parseInt(e.target.value))
  }
 
+ */
 
-  return (
-    <>
 
-      <Input type="email" placeholder="informe um email" value={email} onChange={handleEmailInput}></Input>
+
+ // dentro do return - projeto calculadora
+
+
+
+ /*
+
+ <Input type="email" placeholder="informe um email" value={email} onChange={handleEmailInput}></Input>
       
       <Input type="password" placeholder="informe uma senha" value={senha} onChange={handleSenhaInput}></Input>
 
@@ -195,6 +204,29 @@ function App(){
       
       
       }
+
+
+      */
+
+
+
+  const [contagem, setContagem] = useState(0);
+
+  useEffect(() =>{
+    document.title = `contagem: ${contagem}`
+  }, [contagem])
+
+  function aumentarAction(){
+    setContagem(contagem + 1);
+  }
+
+  return (
+    <>
+
+      <h1>Contagem: {contagem}</h1>
+      <button onClick= {aumentarAction}>Aumentar numero</button>
+      
+      
 
 
     </>
