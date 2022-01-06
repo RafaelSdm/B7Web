@@ -1,6 +1,8 @@
 import React from 'react'
+import {Header} from './components/Header'
 
 
+/*
 function App(){
   return <div>HELLO WORLD!!</div>;
 }
@@ -46,4 +48,29 @@ const App3 = () =>{
   );
 }
 
-export default App3;
+*/
+
+/*
+const Header =  () =>{
+  return(
+      <header>
+        <h1>Título da pagina</h1>
+        <hr />
+      </header>
+  );
+}
+*/
+
+const App = () =>{
+  return(
+
+    <div>
+      <Header/>
+      Olá Mundo!
+    </div>
+
+
+  );
+}
+
+export default App;
