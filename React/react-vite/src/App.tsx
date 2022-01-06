@@ -1,5 +1,7 @@
 import React from 'react'
 import {Header} from './components/Header'
+import { Photo } from './components/Photo'
+import {Photo1} from './components/Photo1'
 
 
 /*
@@ -69,8 +71,18 @@ const App = () =>{
       <Header title='outro exemplo'/>
       <Header/>
 
-      
+
       Olá Mundo!
+
+      <Photo url= 'https:/www.google.com.br/google.jpg' legend='foto do google'/>
+
+      <Photo1 legend='google'>
+
+        <img src="https:/www.google.com.br/google.jpg" alt="" />
+
+      </Photo1>
+
+
     </div>
 
 
