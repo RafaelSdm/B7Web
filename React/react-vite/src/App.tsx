@@ -26,4 +26,24 @@ const App2 = () => {
   )
 }
 
-export default App2;
+
+const App3 = () =>{
+  let name: string = 'Rafael';
+  let lastName: string = 'Damasceno';
+  let n1: number = 10;
+  let n2:number = 30;
+
+
+  function somar( n1:number, n2: number):number{
+    return n1 + n2;
+  }
+
+  return(
+    //<div>Olá {name}!, tudo bem?</div>
+    //<div>Multiplicação: {n1 * n2}</div>
+    //<div>Soma: {somar(10,90)}</div>
+    <div>Olá {`${name.toUpperCase()} ${lastName}`}</div>
+  );
+}
+
+export default App3;
