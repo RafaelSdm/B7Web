@@ -65,7 +65,11 @@ const App = () =>{
   return(
 
     <div>
+      <Header title='Este é um exemplo'/>
+      <Header title='outro exemplo'/>
       <Header/>
+
+      
       Olá Mundo!
     </div>
 
