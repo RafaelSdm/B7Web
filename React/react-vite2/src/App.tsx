@@ -143,6 +143,12 @@ const App = () =>{
 */Botao
 
 
+/*
+
+
+5 ------RENDERIZANDO LISTAS ------------
+
+
 const App = () => {
   let list = [
     {name: 'rafael', age: 20},
@@ -172,6 +178,41 @@ const App = () => {
 
     </div>
   )
+}
+
+*/
+
+const App = () =>{
+
+  const [show, setShow] = useState(false);
+
+  const handleClick = () =>{
+    if(show == false){
+      setShow(true)
+    }else{
+      setShow(false)
+    }
+  }
+
+
+  return(
+    <div>
+
+      <button onClick={handleClick}>{show === true ? 'Ocultar' : 'Mostrar'}</button>
+
+      {
+      
+        show === true && 
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat possimus, tempora obcaecati dolor maiores fugit aperiam voluptatem saepe voluptas cum, magni libero ad, sunt culpa excepturi pariatur consectetur facilis. Sint?
+          </div>
+
+      }
+
+    </div>
+
+  )
+
 }
 
 export default App;
