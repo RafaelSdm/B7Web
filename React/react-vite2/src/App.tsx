@@ -1,8 +1,8 @@
 
-import {useState} from 'react'
+import React , {useState} from 'react'
 
 /*
-1 - INTRODUCAO
+1 ------- INTRODUCAO ---------
 
 const App = () =>{
 
@@ -41,6 +41,11 @@ const App = () =>{
 
 
 
+/*
+
+
+2 ----- PROJETO CONTADOR --------------
+
 const App = () =>{
 
   const [n, setN] = useState(0);
@@ -65,6 +70,36 @@ const App = () =>{
     </div>
 
   );
+}
+
+*/
+
+
+const App = () => {
+
+
+  const [name, setName] = useState('');
+
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) =>{
+    setName(event.target.value);
+    
+    
+  }
+
+
+  return(
+
+    <div>
+      Nome:
+      <input type="text" value={name} onChange={handleInput} name="" id="" />
+      <hr />
+      Seu nome é: {name}
+    </div>
+
+  );
+
+
+
 }
 
 export default App;
