@@ -3,6 +3,8 @@ import React , {useState} from 'react'
 
 import {Botao} from './components/Botao'
 
+import {Pessoa} from './components/Pessoa'
+
 /*
 1 ------- INTRODUCAO ---------
 
@@ -113,6 +115,12 @@ const App = () => {
 
 */
 
+
+/*
+
+
+4 ----------- comunicacao entre componentes -----------
+
 const App = () =>{
 
 
@@ -129,6 +137,40 @@ const App = () =>{
     </div>
 
 
+  )
+}
+
+*/Botao
+
+
+const App = () => {
+  let list = [
+    {name: 'rafael', age: 20},
+    {name: 'luis', age: 45},
+    {name: 'pedro', age: 10},
+    {name: 'maria', age: 55},
+    {name: 'jose', age: 66}
+  ]
+
+
+
+  return(
+    <div>
+
+      <h2>Lista de presenca</h2>
+
+      <ul>
+        {list.map((item, index) => (
+         // <li key={index}>{item.name.toUpperCase()} - {item.age} anos</li>
+
+         <Pessoa key={index} data={item}/>
+
+        ))}
+      </ul>
+
+
+
+    </div>
   )
 }
 
