@@ -1,6 +1,8 @@
 
 import React , {useState} from 'react'
 
+import {Botao} from './components/Botao'
+
 /*
 1 ------- INTRODUCAO ---------
 
@@ -112,9 +114,16 @@ const App = () => {
 */
 
 const App = () =>{
+
+
+  const botaoEventAction = () =>{
+    alert('frase do app');
+  }
   return(
 
     <div>
+
+      <Botao clickFn={botaoEventAction} text="Clicar no botao"/>
     
     
     </div>
