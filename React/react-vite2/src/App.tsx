@@ -75,6 +75,12 @@ const App = () =>{
 */
 
 
+
+/*
+
+3 ---- Usando inputs  --------
+
+
 const App = () => {
 
 
@@ -100,6 +106,21 @@ const App = () => {
 
 
 
+}
+
+
+*/
+
+const App = () =>{
+  return(
+
+    <div>
+    
+    
+    </div>
+
+
+  )
 }
 
 export default App;
