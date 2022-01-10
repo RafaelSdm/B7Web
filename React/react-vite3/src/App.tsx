@@ -1,6 +1,14 @@
 
 
 import {useState} from 'react'
+import './styles.css';
+import {Botao} from './components/Botao'
+
+
+/*
+
+
+// Aplicando css INLINE
 
 
 const App = () =>{
@@ -39,5 +47,58 @@ const App = () =>{
 
 
 }
+
+
+*/
+
+
+
+/*
+
+
+// Primeiro exemplo usando stylessett
+
+
+const App = () =>{
+
+  const handleClick = () =>{
+
+  }
+
+  return(
+
+    <div>
+
+      <button className='botao' onClick={handleClick}>Clique aqui</button>
+
+    </div>
+
+
+  )
+
+}
+
+
+*/
+
+const App = () => {
+
+  return(
+
+    <div>
+
+      <Botao/>
+
+    </div>
+  );
+
+
+
+
+}
+
+
+
+
 
 export default App;
