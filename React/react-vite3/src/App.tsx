@@ -164,6 +164,9 @@ const App = () => {
 
 
 
+/*
+
+// FILHO DOS COMPONENTS
 
 const App = () => {
   return(
@@ -182,6 +185,29 @@ const App = () => {
 
     </C.Container1>
   )
+}
+
+*/
+
+
+const App  = () =>{
+  return(
+
+    <C.Container1 bgColor='gray'>
+
+      texto qualquer
+
+      <C.Botao11 bg='#ff0000'>Botao grande</C.Botao11>
+      <C.Botao11 bg='gold' small={true}>Botao pequeno</C.Botao11>
+
+
+    </C.Container1>
+
+
+
+  )
+
+
 }
 
 

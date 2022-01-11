@@ -11,9 +11,14 @@ type ContainerProps = {
 
 export const Container1 = styled.div<ContainerProps>`
 
+
+    max-width: 600px;
+    margin: 0 auto;
+
     background-color: ${(props) => props.bgColor};
     color: white;
     padding: 20px;
+    display: flex;
 
 
 
@@ -36,6 +41,16 @@ export const Container1 = styled.div<ContainerProps>`
 
     .link:hover{
         color: pink;
+    }
+
+
+
+
+
+
+    @media(max-width: 500px){
+        background-color: red;
+        flex-direction: column;
     }
 
 
