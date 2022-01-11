@@ -1,3 +1,9 @@
+
+/*
+
+//PRIMEIROS PASSOS COM O TWICSS
+
+
 const App = () =>{
   return(
 
@@ -18,6 +24,21 @@ const App = () =>{
     </div>
 
    
+  )
+}
+
+
+
+*/
+
+
+const App =  () =>{
+  return(
+    <div className="bg-blue-800 text-white p-4 text-2xl font-bold flex flex-col text-center md:flex-row md:text-green-500 lg:text-black lg:justify-between">
+      Texto de exemplo
+
+      <button className="bg-green-300 text-black p-2 rounded-xl mt-3 md: ml-3 md:mt-0">Clique aqui</button>
+    </div>
   )
 }
 
