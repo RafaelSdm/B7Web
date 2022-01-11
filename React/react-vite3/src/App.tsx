@@ -81,6 +81,12 @@ const App = () =>{
 
 */
 
+
+/*
+
+
+// estilizando com stylesshet
+
 const App = () => {
 
   return(
@@ -97,6 +103,18 @@ const App = () => {
 
 }
 
+
+*/
+
+
+
+const App = () =>{
+  return(
+    <div>
+      
+    </div>
+  )
+}
 
 
 
