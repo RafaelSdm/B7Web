@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
 
-export const Container1 = styled.div`
 
-    background-color: blue;
+
+
+type ContainerProps = {
+    bgColor: string;
+}
+
+
+export const Container1 = styled.div<ContainerProps>`
+
+    background-color: ${(props) => props.bgColor};
     color: white;
     padding: 20px;
 
@@ -11,10 +19,17 @@ export const Container1 = styled.div`
 
 `;
 
-export const Botao11= styled.button`
+
+type BotaoProps = {
+    bg: string;
+    small?: boolean;
+}
+
+export const Botao11= styled.button<BotaoProps>`
     
-font-size: 40px;
+font-size: ${(props) => props.small ? '15px': '40px'};
 padding: 20px;
+background-color: ${(props) => props.bg}
 
 
 `;

@@ -116,8 +116,10 @@ const App = () => {
 
 
 
+/*
 
 
+// COMPONENTS COM STYLE COMPONENTS
 
 const App = () =>{
   return(
@@ -126,6 +128,31 @@ const App = () =>{
       <C.Botao11>clique aqui</C.Botao11>
     </Container>
   )
+}
+
+
+*/
+
+
+
+const App = () => {
+
+  return(
+    <C.Container1 bgColor='green'>
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, quas. Commodi suscipit laborum, quis aliquid architecto asperiores totam iure, voluptatem a, natus adipisci ea error alias magnam. Architecto, vel possimus.
+      <br />
+
+      <C.Botao11 bg='#ff0000'>Botao grande</C.Botao11>
+      <C.Botao11 bg='gold' small={true}>Botao pequeno</C.Botao11>
+
+
+    </C.Container1>
+
+
+  );
+
+
 }
 
 
