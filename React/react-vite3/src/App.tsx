@@ -1,9 +1,17 @@
 
-
 import {useState} from 'react'
 import './styles.css';
 import {Botao} from './components/Botao'
+import styled from 'styled-components';
 
+import {Container} from './components/Container'
+
+import {Botao1} from './components/Botao1'
+
+
+import {Container1, Botao11} from './AppStyles'
+
+import * as C from './AppStyles'
 
 /*
 
@@ -108,13 +116,18 @@ const App = () => {
 
 
 
+
+
+
 const App = () =>{
   return(
-    <div>
-      
-    </div>
+    <Container>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eveniet minima, error exercitationem dolores in possimus quidem recusandae eius quas ipsum quaerat asperiores, eaque illo dolorem harum iure inventore vero.
+      <C.Botao11>clique aqui</C.Botao11>
+    </Container>
   )
 }
+
 
 
 
