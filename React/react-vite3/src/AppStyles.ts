@@ -17,6 +17,29 @@ export const Container1 = styled.div<ContainerProps>`
 
 
 
+    span{
+        font-weight: bold;
+        color: black;
+
+        a{
+            color: gold;
+        }
+    }
+
+    .link{
+        color: red;
+
+        &:hover{
+            color: #ff0000
+        }
+    }
+
+    .link:hover{
+        color: pink;
+    }
+
+
+
 `;
 
 

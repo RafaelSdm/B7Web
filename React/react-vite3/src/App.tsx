@@ -135,12 +135,17 @@ const App = () =>{
 
 
 
+/*
+
+// Passansdo props dinamicas ao styled
+
 const App = () => {
 
   return(
     <C.Container1 bgColor='green'>
 
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, quas. Commodi suscipit laborum, quis aliquid architecto asperiores totam iure, voluptatem a, natus adipisci ea error alias magnam. Architecto, vel possimus.
+      
       <br />
 
       <C.Botao11 bg='#ff0000'>Botao grande</C.Botao11>
@@ -155,7 +160,29 @@ const App = () => {
 
 }
 
+*/
 
+
+
+
+const App = () => {
+  return(
+    <C.Container1 bgColor='green'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fugiat corporis harum quae, ad rerum ducimus itaque cumque velit eum, exercitationem sequi temporibus quaerat aliquam impedit inventore voluptates. Placeat, dicta.
+      <hr />
+      <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit eveniet voluptatibus <a href="#">link dentro do span</a> nostrum et obcaecati aspernatur minus ipsam repellat totam nulla accusamus amet, fugit aliquam sed rerum consectetur. Quasi, consequuntur omnis.</span>
+
+      <a href="#" className='link'>link de exemplo</a>
+
+      <br />
+
+      <C.Botao11 bg='#ff0000'>Botao grande</C.Botao11>
+      <C.Botao11 bg='gold' small={true}>Botao pequeno</C.Botao11>
+
+
+    </C.Container1>
+  )
+}
 
 
 
