@@ -3,6 +3,8 @@ import {useState, useEffect, ChangeEvent} from 'react'
 
 import {Movie} from './types/movie'
 
+import { Post } from './types/Post'
+
 
 
 /*
@@ -279,6 +281,11 @@ const App =() =>{
 */
 
 
+/*
+
+
+// lidando com erros de requisição
+
 const App =() =>{
 
   const[movies, setMovies] = useState<Movie[]>([]);
@@ -377,6 +384,95 @@ const App =() =>{
   )
 
 }
+
+*/
+
+
+
+const App =() =>{
+
+  const [posts, setPosts] = useState<Post[]>([])
+
+  const [loading, setLoading] = useState(false)
+
+
+  useEffect(() =>{
+    loadPost();
+  }, [])
+
+
+  const loadPost = async () => {
+      let response = await fetch('https://jsonplaceholder.typicode.com/posts')
+      let json = await response.json();
+
+      setPosts(json)
+  }
+
+ 
+
+ 
+
+  return(
+    <div className='p-5'>
+      
+     
+
+
+
+
+      {loading && 
+        <div>Carregando...</div>
+      
+      
+      }
+
+
+     
+
+      {!loading && posts.length > 0 &&
+
+        <>
+
+                <div >
+
+                {posts.map((item, index) =>(
+                  <div key={index} className=' my-4'>
+
+                    <h4 className='font-bold'>{item.title}</h4>
+                    <small>#{item.id} - Usuário : {item.userId} </small>
+                    <p>{item.body}</p>
+                    
+                  </div>
+                ))}
+
+                </div>
+                
+        
+        
+        
+        </>
+      
+      
+      
+      }
+
+
+      {!loading && posts.length === 0 &&
+
+
+          <div>Nao ha posts para exibir</div>
+      
+      
+      
+      }
+
+    </div>
+
+      
+  )
+
+}
+
 
 
 export default App;
