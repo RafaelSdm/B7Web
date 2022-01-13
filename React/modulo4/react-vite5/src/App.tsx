@@ -140,6 +140,12 @@ const App =() =>{
 */
 
 
+
+
+
+/*
+// Usando await e async
+
 const App =() =>{
 
   const[movies, setMovies] = useState<Movie[]>([]);
@@ -149,27 +155,7 @@ const App =() =>{
     loadMovies();
   }, [])
 
-  /*
-
-  const loadMovies = () =>{
-    fetch('https://api.b7web.com.br/cinema/')
-    .then((response) =>{
-
-      return response.json();
-
-
-
-    })
-
-    .then((json) =>{
-      setMovies(json)
-    });
-
-
-    window.alert("teste de alert")
-  }
-
-  */
+ 
 
   const loadMovies = async () =>{
     let response = await fetch('https://api.b7web.com.br/cinema/')
@@ -180,7 +166,7 @@ const App =() =>{
   
 
 
-    //window.alert("teste de alert")
+    
   }
 
   return(
@@ -198,6 +184,90 @@ const App =() =>{
 
       </div>
     </div>
+  )
+
+}
+
+*/
+
+
+
+
+const App =() =>{
+
+  const[movies, setMovies] = useState<Movie[]>([]);
+
+  const [loading, setLoading] = useState(false)
+
+
+  useEffect(() =>{
+    loadMovies();
+  }, [])
+
+ 
+
+  const loadMovies = async () =>{
+    setLoading(true);
+    let response = await fetch('https://api.b7web.com.br/cinema/')
+    let json  = await response.json();
+    setLoading(false);
+
+    setMovies(json)
+    
+  
+
+
+    
+  }
+
+  return(
+    <div>
+      <button className='block bg-blue-400 p-4 rounded' onClick={loadMovies}>Carregar filmes</button>
+     
+
+
+
+
+      {loading && 
+        <div>Carregando...</div>
+      
+      
+      }
+
+
+      {!loading &&
+      
+        <div>total de filmes: {movies.length}</div>
+      
+      }
+
+      {!loading &&
+
+        <>
+
+                <div className='grid grid-cols-6 gap-3'>
+
+                {movies.map((item, index) =>(
+                  <div key={index}>
+                    <img src={item.avatar} className='w-32 block' alt="" />
+                    {item.titulo}
+                  </div>
+                ))}
+
+                </div>
+                
+        
+        
+        
+        </>
+      
+      
+      
+      }
+
+    </div>
+
+      
   )
 
 }
