@@ -1,7 +1,12 @@
 
 import {useReducer} from 'react'
 
+import {useContagem} from './hooks/contage'
 
+
+/*
+
+//ÁPLICANDO REDUCER
 
 type reducerState = {
   count: number;
@@ -62,6 +67,31 @@ const App = () =>{
   )
 }
 
+*/
 
+
+
+
+
+
+const App = () =>{
+
+  const [state, dispatch] = useContagem();
+
+
+  return(
+    <div className="bg-blue-500 p-5">
+
+      Contagem : {state.count}
+      <hr />
+      <button className='p-3 border bg-white' onClick={() => dispatch({type: 'ADD'}) }>Adiconar</button>
+      <button className='p-3 border bg-white' onClick={() => dispatch({type: 'DEL'}) }>Deletar</button>
+      <button className='p-3 border bg-white' onClick={() => dispatch({type: 'RESET'}) }>Resetar</button>
+
+
+      
+    </div>
+  )
+}
 
 export default App;
