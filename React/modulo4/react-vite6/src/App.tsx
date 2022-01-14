@@ -1,7 +1,13 @@
 
-import {useReducer} from 'react'
+import {ChangeEvent, useReducer, useState} from 'react'
 
 import {useContagem} from './hooks/contage'
+
+import {usePeople} from './hooks/people'
+
+
+
+
 
 
 /*
@@ -72,7 +78,8 @@ const App = () =>{
 
 
 
-
+/*
+// USANDO O REDUCER SEPARADO
 
 const App = () =>{
 
@@ -94,4 +101,91 @@ const App = () =>{
   )
 }
 
+*/
+
+
+
+
+
+
+
+
+const App = () =>{
+  const [list, dispatch] = usePeople();
+  const [nameInput, setNameInput] = useState('')
+
+  const handleAddButton = () =>{
+      if(nameInput){
+        dispatch({
+          type: 'ADD',
+          payload:{
+            name: nameInput
+          }
+        })
+
+        setNameInput('');
+      }
+  }
+
+
+  const handleInputChange =(e: ChangeEvent<HTMLInputElement>) =>{
+    setNameInput(e.target.value);
+  
+  }
+
+
+  const deletePerson = (id:string) =>{
+    dispatch({
+      type:'DEL',
+      payload:{
+        id
+      }
+    })
+  }
+
+  const handleOrderButton = () =>{
+    dispatch({
+      type: 'ORDER'
+    })
+  }
+
+
+
+
+  return(
+    <div className='p-5'>
+
+      <input className='border-2' type="text" value={nameInput} onChange={handleInputChange} name="" id="" />
+      <button onClick={handleAddButton}>Adicionar</button>
+
+
+
+
+
+    <hr />
+
+    <button onClick={handleOrderButton}>Ordenar</button>
+    <br />
+
+      Lista de pessoas:
+      <ul>
+        {list.map((item, index) => (
+          <li key={index}>
+            {item.name} 
+            <button onClick={() => deletePerson(item.id)}> [ Deletar ]</button>
+
+          </li>
+
+        ))}
+
+      </ul>
+
+
+
+
+
+
+    </div>
+  )
+}
 export default App;
