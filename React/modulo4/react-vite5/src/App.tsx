@@ -10,6 +10,9 @@ import {PostForm} from './components/PostForm'
 import {PostItem} from './components/PostItem'
 
 
+import {api} from './api'
+
+
 
 /*
 
@@ -509,90 +512,36 @@ const App =() =>{
 
   const loadPost = async () => {
       setLoading(true)
-      let response = await fetch('https://jsonplaceholder.typicode.com/posts')
-      let json = await response.json();
+      let json = await api.getAllPosts()
+
       setLoading(false)
       setPosts(json)
+
+      
+      
   }
 
 
-  /*
   
-  const handleAddClick = async () =>{
-    
-
-    if(addTitle && addBodyText){
-
-      window.alert("mensagem captada com sucesso")
-      let response = await fetch("https://jsonplaceholder.typicode.com/posts", 
-
-        {
-          method: 'POST',
-          body:  JSON.stringify({
-            title: addTitle,
-            body: addBodyText,
-            userId: 1,
-
-          }),
-
-          headers:{
-            'Content-Type': 'application/json'
-          }
-        }
-      
-      
-      )
-
-      let json = await response.json();
-
-     // console.log(json)
-
-     if(json.id){
-       alert('post adicionado com sucesso')
-     }else{
-       alert("ERROR")
-     }
-
-    }else{
-      window.alert("Preencha os dados corretamente para serem enviados")
-    }
-  }
-
-  */
 
 
 
   const handleAddPost  = async (title:string, body:string) =>{
 
-    let response = await fetch("https://jsonplaceholder.typicode.com/posts", 
+    let json = await api.addNewPost(title, body, 1)
 
-        {
-          method: 'POST',
-          body:  JSON.stringify({
-            title,
-            body,
-            userId:1,
+    if(json.id){
+      alert('post adicionado com sucesso')
+    }else{
+      alert("ERROR")
+    }
 
-          }),
 
-          headers:{
-            'Content-Type': 'application/json'
-          }
-        }
-      
-      
-      )
-
-      let json = await response.json();
+    
 
      // console.log(json)
 
-     if(json.id){
-       alert('post adicionado com sucesso')
-     }else{
-       alert("ERROR")
-     }
-
+    
   }
 
  
