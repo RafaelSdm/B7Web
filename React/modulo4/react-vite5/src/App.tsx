@@ -389,6 +389,13 @@ const App =() =>{
 
 
 
+
+/*
+
+
+// LENDO INFORMAÕES COM JSONPLACEHOLDER
+
+
 const App =() =>{
 
   const [posts, setPosts] = useState<Post[]>([])
@@ -473,6 +480,168 @@ const App =() =>{
 
 }
 
+
+*/
+
+
+
+const App =() =>{
+
+  const [posts, setPosts] = useState<Post[]>([])
+
+  const [loading, setLoading] = useState(false)
+
+
+  const [addTitle, setTitle] = useState('');
+  const [addBodyText, setBodyText ] = useState('')
+
+
+  useEffect(() =>{
+    loadPost();
+  }, [])
+
+
+  const loadPost = async () => {
+      setLoading(true)
+      let response = await fetch('https://jsonplaceholder.typicode.com/posts')
+      let json = await response.json();
+      setLoading(false)
+      setPosts(json)
+  }
+
+
+
+  const handleAddTitle = (e: ChangeEvent<HTMLInputElement>) =>{
+    setTitle(e.target.value)
+
+  }
+
+
+  const handleAddBody = (event: ChangeEvent<HTMLTextAreaElement>) =>{
+    setBodyText(event.target.value)
+
+  }
+
+  const handleAddClick = async () =>{
+    /*
+    window.alert(`Informações obtidas: titulo ${addTitle} Texto: ${addBodyText}`)
+
+    */
+
+    if(addTitle && addBodyText){
+
+      window.alert("mensagem captada com sucesso")
+      let response = await fetch("https://jsonplaceholder.typicode.com/posts", 
+
+        {
+          method: 'POST',
+          body:  JSON.stringify({
+            title: addTitle,
+            body: addBodyText,
+            userId: 1,
+
+          }),
+
+          headers:{
+            'Content-Type': 'application/json'
+          }
+        }
+      
+      
+      )
+
+      let json = await response.json();
+
+     // console.log(json)
+
+     if(json.id){
+       alert('post adicionado com sucesso')
+     }else{
+       alert("ERROR")
+     }
+
+    }else{
+      window.alert("Preencha os dados corretamente para serem enviados")
+    }
+  }
+
+ 
+
+ 
+
+  return(
+    <div className='p-5'>
+      
+     
+
+
+
+
+      {loading && 
+        <div>Carregando...</div>
+      
+      
+      }
+
+
+      <fieldset className='border-2 mb-5 p-3'>
+        <legend>Adicionar novo post</legend>
+
+        <input value={addTitle} onChange={handleAddTitle} className='block border' type="text" name="" placeholder='informe um titulo' id="" />
+
+
+        <textarea value={addBodyText}  onChange={handleAddBody} className='block border'></textarea>
+
+
+        <button className='border mt-2' onClick={handleAddClick} >Adicionar</button>
+      </fieldset>
+
+
+     
+
+      {!loading && posts.length > 0 &&
+
+        <>
+
+                <div >
+
+                {posts.map((item, index) =>(
+                  <div key={index} className=' my-4'>
+
+                    <h4 className='font-bold'>{item.title}</h4>
+                    <small>#{item.id} - Usuário : {item.userId} </small>
+                    <p>{item.body}</p>
+                    
+                  </div>
+                ))}
+
+                </div>
+                
+        
+        
+        
+        </>
+      
+      
+      
+      }
+
+
+      {!loading && posts.length === 0 &&
+
+
+          <div>Nao ha posts para exibir</div>
+      
+      
+      
+      }
+
+    </div>
+
+      
+  )
+
+}
 
 
 export default App;
