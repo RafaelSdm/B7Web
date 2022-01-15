@@ -1,45 +1,59 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import {useState} from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+import * as C from './App.styles'
+import {Item} from './Types/item'
+import {ListItem} from './components/ListItem'
+import {AddArea} from './components/AddArea'
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+const App = () =>{
+
+  const[list, setList] = useState<Item[]>([
+    {
+      id:1,
+      name: 'comprar um pao na padaria',
+      done: false
+    },
+    {
+      id: 2,
+      name:'comprar um bolo na padaria',
+      done: true
+    }
+  ]);
+
+
+  const handleAddTask = (taksName: string) =>{
+    let newList = [...list];
+    newList.push({
+      id: list.length + 1,
+      name: taksName,
+      done: false,
+    });
+
+    setList(newList);
+
+  }
+
+
+
+  return(
+    <C.Container>
+      <C.Area>
+        <C.Header>Lista de tarefas</C.Header>
+
+
+        <AddArea onEnter={handleAddTask} />
+
+
+        {list.map((item, index) =>(
+          <ListItem key={index} item={item}/>
+        ))}
+
+
+
+
+      </C.Area>
+    </C.Container>
+  );
 }
 
-export default App
+export default App;
