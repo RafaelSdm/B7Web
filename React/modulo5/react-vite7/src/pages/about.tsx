@@ -1,7 +1,10 @@
 export const About = () =>{
     return(
         <div>
-            Pagina About
+            <ul>
+                <li>RAFAEL</li>
+                <li>JOSE</li>
+            </ul>
         </div>
     )
 }
