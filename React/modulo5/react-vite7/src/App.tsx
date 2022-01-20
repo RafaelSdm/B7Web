@@ -81,6 +81,44 @@ const App = () =>{
 */
 
 
+/*
+
+// ROTAS DE ERRO 404
+
+const App = () =>{
+
+  return(
+    <div className="p-4" >
+      <header>
+        <h1>titulo do site</h1>
+      </header>
+      <hr />
+      <div className="py-4">
+        
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/about/rafael" element={<AboutRafael/>}/>
+          <Route path="/about/jose" element={<AboutJose/>}/>
+          <Route path="*" element={<NotFound/>}/>
+        </Routes>
+
+
+      </div>
+      <hr />
+
+      <footer>todos os direitos reservados</footer>
+
+      
+    </div>
+  )
+
+
+}
+
+*/
+
+
 const App = () =>{
 
   return(
