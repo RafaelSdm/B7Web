@@ -5,6 +5,7 @@ import {AboutRafael} from './pages/aboutRafael'
 import {AboutJose} from './pages/aboutJose'
 import {NotFound} from './pages/NotFound'
 import {AboutItem} from './pages/aboutItem'
+import {RequireAuth} from './RequireAuth'
 
 
 /*
@@ -171,7 +172,7 @@ const App = () =>{
       
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
+        <Route path="/about" element={<RequireAuth><About/></RequireAuth>}/>
         <Route path="/about/rafael" element={<AboutRafael/>}/>
         <Route path="/about/jose" element={<AboutJose/>}/>
         <Route path="/about/:slug" element={<AboutItem/>}/>
