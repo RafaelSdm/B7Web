@@ -6,10 +6,12 @@ import {NotFound} from '../pages/NotFound'
 import {AboutItem} from '../pages/aboutItem'
 import {RequireAuth} from '../RequireAuth'
 
-import {Route, Routes} from 'react-router-dom'
+import {Route, Routes, useRoutes} from 'react-router-dom'
 
 
 export const MainRoutes = () =>{
+
+  /*
     return(
         <Routes>
         <Route path="/" element={<Home/>}/>
@@ -20,4 +22,12 @@ export const MainRoutes = () =>{
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     )
+  */
+
+    return useRoutes([
+      {path:'/', element:<Home/>},
+      {path: '/about', element: <RequireAuth><About/></RequireAuth>},
+      {path: '/about/:slug', element: <AboutItem/> },
+      {path: '*', element: <NotFound/>}
+    ])
 }
