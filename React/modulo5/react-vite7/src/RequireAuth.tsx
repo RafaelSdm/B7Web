@@ -6,7 +6,7 @@ type Props ={
 
 export const RequireAuth = ({children}: Props) => {
    // const navigate = useNavigate()
-    const isAuth = false;
+    const isAuth = true;
 
 
     if(isAuth){
