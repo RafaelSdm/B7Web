@@ -4,6 +4,7 @@ import {About}  from './pages/about'
 import {AboutRafael} from './pages/aboutRafael'
 import {AboutJose} from './pages/aboutJose'
 import {NotFound} from './pages/NotFound'
+import {AboutItem} from './pages/aboutItem'
 
 
 /*
@@ -119,6 +120,11 @@ const App = () =>{
 */
 
 
+/*
+
+// criando grupo de rotaas
+
+
 const App = () =>{
 
   return(
@@ -150,5 +156,38 @@ const App = () =>{
 
 }
 
+*/
+
+
+const App = () =>{
+  return(
+
+    <div className="p-4" >
+    <header>
+      <h1>titulo do site</h1>
+    </header>
+    <hr />
+    <div className="py-4">
+      
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/about/rafael" element={<AboutRafael/>}/>
+        <Route path="/about/jose" element={<AboutJose/>}/>
+        <Route path="/about/:slug" element={<AboutItem/>}/>
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
+
+
+    </div>
+    <hr />
+
+    <footer>todos os direitos reservados</footer>
+
+    
+  </div>
+
+  )
+}
 
 export default App;
