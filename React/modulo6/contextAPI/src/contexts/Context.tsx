@@ -7,7 +7,7 @@ type ContextType = {
 }
 
 const initialState = {
-    name: 'Rafael',
+    name: 'Rafael de souza damasceno',
     age: 20
 }
 
