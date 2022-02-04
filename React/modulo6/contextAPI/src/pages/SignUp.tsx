@@ -84,7 +84,7 @@ export const SignUp = () =>{
 
     return(
         <div>
-            <h3>Tela de SignUp</h3>
+            <h3>Tela de SignUp ({state.theme.status})</h3>
 
             <input type="text" name="" placeholder='Informe um nome' value={nameInput} onChange={handleNameChange} id="" />
 
