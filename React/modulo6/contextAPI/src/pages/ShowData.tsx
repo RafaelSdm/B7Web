@@ -21,8 +21,23 @@ export const ShowData = () =>{
     const {state, dispatch} = useContext(Context)
     return(
         <div>
-            tela do showData para o usuario {state.user.name} que tem {state.user.age} anos
+            <h3>Tela showData</h3>
+
+            {state.user.name &&
+                <>
+                    usuario: {state.user.name} tem {state.user.age} anos
+                     <hr />
+
+                </>
+                
+                
+            
+            }
+
+            {!state.user.name && 'Nao possui nenhuma informacao no momento'}
             <hr />
+            
+          
             <Link to='/'>Voltar pra SignUp</Link>
         </div>
     )
