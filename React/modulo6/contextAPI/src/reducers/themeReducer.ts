@@ -9,7 +9,7 @@ export const themeInitialState: ThemeType = {
 
 }
 
-export const userReducer = (state: ThemeType, action: reducerActionType ) =>{
+export const themeReducer = (state: ThemeType, action: reducerActionType ) =>{
 
     switch(action.type){
         case 'CHANGE_STATUS':
