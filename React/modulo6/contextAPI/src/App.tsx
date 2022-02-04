@@ -1,24 +1,27 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {SignUp} from './pages/SignUp'
 import {ShowData} from './pages/ShowData'
+import {ContextProvider} from './contexts/Context'
 
 
 const App =() =>{
   return(
-    <BrowserRouter>
+    <ContextProvider>
+      <BrowserRouter>
 
-      <h1>Titulo da pagina</h1>
-      <hr />
+        <h1>Titulo da pagina</h1>
+        <hr />
 
-      <Routes>
+        <Routes>
 
-        <Route path='/' element={<SignUp/>}/>
-        <Route path='/exibir'element={<ShowData/>}/>
+          <Route path='/' element={<SignUp/>}/>
+          <Route path='/exibir'element={<ShowData/>}/>
 
 
-      </Routes>
-    
-    </BrowserRouter>
+        </Routes>
+      
+      </BrowserRouter>
+    </ContextProvider>  
   )
 }
 
